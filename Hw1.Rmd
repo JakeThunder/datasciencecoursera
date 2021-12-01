@@ -48,3 +48,7 @@ hw1 %>%
   summarise(mean = mean(Solar.R, na.rm = TRUE))
 ```
 
+```{r}
+
+```
+
