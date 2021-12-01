@@ -1,0 +1,50 @@
+---
+title: "Homework week 1 R programming"
+author: "Jakob Hansen Thorius"
+date: "1/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## R Markdown
+
+```{r}
+hw1 <- read_csv("hw1_data.csv")
+```
+
+```{r}
+glimpse(hw1)
+```
+
+```{r}
+head(hw1, 2)
+```
+
+```{r}
+tail(hw1, 2)
+```
+
+```{r}
+hw1$Ozone[47]
+```
+
+```{r}
+hw1 %>% 
+count(Ozone)
+```
+
+```{r}
+hw1 %>% 
+summarise(mean = mean(Ozone, na.rm = TRUE))
+```
+
+```{r}
+hw1 %>% 
+  filter(Ozone > 31, Temp > 90) %>% 
+  summarise(mean = mean(Solar.R, na.rm = TRUE))
+```
+
