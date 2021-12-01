@@ -49,6 +49,14 @@ hw1 %>%
 ```
 
 ```{r}
+hw1 %>% 
+  filter(Month == 6) %>% 
+  summarise(mean = mean(Temp))
+```
 
+```{r}
+hw1 %>% 
+  filter(Month == 5) %>% 
+  summarise(Max = max(Ozone, na.rm = T))
 ```
 
